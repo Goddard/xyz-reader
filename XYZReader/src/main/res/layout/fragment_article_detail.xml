@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.example.xyzreader.ui.DrawInsetsFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/draw_insets_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.xyzreader.ui.ObservableScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:paddingBottom="@dimen/fab_size">
+
+            <LinearLayout
+                android:id="@+id/header_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/theme_primary">
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/photo_size"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/article_title"
+                    style="@style/Large_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="0.9" />
+
+                <TextView
+                    android:id="@+id/article_byline"
+                    style="@style/Detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_margin_big"
+                    android:layout_marginLeft="@dimen/text_margin_big"
+                    android:layout_marginBottom="@dimen/text_margin_big"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/article_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Paragraph"
+                android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+
+        </LinearLayout>
+    </com.example.xyzreader.ui.ObservableScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_share"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/action_share"
+        android:elevation="@dimen/fab_elevation"
+        app:borderWidth="0dp"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"/>
+
+</com.example.xyzreader.ui.DrawInsetsFrameLayout>
