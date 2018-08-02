@@ -16,5 +16,5 @@
     <dimen name="photo_size">250dp</dimen>
     <dimen name="text_margin_little">8dp</dimen>
     <dimen name="text_margin_big">16dp</dimen>
-    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
 </resources>
